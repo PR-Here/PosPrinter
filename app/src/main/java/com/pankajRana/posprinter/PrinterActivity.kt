@@ -1,6 +1,7 @@
 package com.pankajRana.posprinter
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.format.DateFormat
@@ -32,11 +33,12 @@ public class PrinterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_printer)
-        (application as App).tracker.apply {
+
+      /*  (application as App).tracker.apply {
             setScreenName("MainActivity")
             send(HitBuilders.ScreenViewBuilder().build())
         }
-
+*/
         val btnSearch = findViewById<Button>(R.id.btn_search)
 
         printer.setCharsetName("UTF-8")
